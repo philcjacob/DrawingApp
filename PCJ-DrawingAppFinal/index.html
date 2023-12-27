@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="lib/p5.min.js"></script>
+    <script src="lib/p5.dom.js"></script>
+
+    <script src="sketch.js"></script>
+
+    <!-- add extra scripts below -->
+    <script src="toolbox.js"></script>
+    <script src="colourPalette.js"></script>
+    <script src="helperFunctions.js"></script>
+
+
+    <script src="freehandTool.js"></script>
+    <script src="lineToTool.js"></script>
+    <script src="brushTool.js"></script>
+    <script src="sprayCanTool.js"></script>
+    <script src="mirrorDrawTool.js"></script>
+    <script src="fillBucketTool.js"></script>
+    <script src="eyedropperTool.js"></script>
+    <script src="selectTool.js"></script>
+    <script src="blendTool.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  	<div class="wrapper">
+      <div class="box header" id="header">My Drawing App
+          &nbsp; &nbsp; &nbsp;
+        <button id="clearButton">Clear</button>
+        <button id="saveImageButton">Save Image</button>
+          &nbsp; &nbsp; &nbsp;<div id="tooltipText" style="display: inline; font-size: 11pt; color: dodgerblue"></div>
+      </div>
+      <div class="box" id="sidebar"></div>
+      <div id="content"></div>
+      <div class="box" id="sidebar2"></div>
+      <div class="box colourPalette" id="colorPBox" style="display: grid">
+        <input id="colorPicker" type="color">
+        <form>
+        <label for="alphaRange">Opacity:</label><br>
+        <input type="range" id="alphaRange" min="0" max="255" value="200">
+        </form>
+          <button id="addSwatchButton"><b> + </b>Add Swatch</button>
+          <button id="clearSwatchesButton">Clear Swatch List</button>
+      </div>
+      <div class="box swatchBox"></div>
+      <div class="box options">
+
+      </div>
+	</div>
+  </body>
+</html>

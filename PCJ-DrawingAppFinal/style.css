@@ -1,0 +1,91 @@
+html, body {
+  margin: 0px;
+  height: 100%;
+}
+
+#sidebar {
+	grid-area: sidebar;
+}
+
+#content {
+	grid-area: content;
+    background-color: #999;
+}
+
+#content > canvas {
+    position: absolute;
+    margin: 5px;
+}
+
+.header {
+	grid-area: header;
+	font-family: Helvetica, sans-serif;
+    padding-left: 10px;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+.sideBarItem {
+	max-height: 40px;
+	max-width: 40px;
+	padding:5px;
+}
+
+.sideBarItem img {
+	max-height: 40px;
+	max-Width: 40px;
+}
+
+.colourPalette {
+	grid-area: colourP;
+	display: flex;
+	flex-direction: grid;
+	flex-flow: wrap;
+}
+
+.swatchBox {
+	grid-area: swatchBox;
+	display: flex;
+	flex-direction: grid;
+	flex-flow: wrap;
+}
+
+
+.options {
+	grid-area: options;
+	padding: 15px;
+}
+
+.colourSwatches {
+	box-sizing: border-box;
+	width: 20px;
+	height: 20px;
+	max-height: 20px;
+	max-width: 40px;
+	margin: 5px;
+}
+
+.wrapper {
+		display: grid;
+		height: 100%;
+		grid-template-columns: 55px 220px 210px  minmax(500px, 1fr);
+		grid-template-rows: 35px auto 160px;
+		grid-template-areas:
+               "header header header header"
+				"sidebar content content content"
+                "sideBar colourP swatchBox options";
+		background-color: #fff;
+		color: #444;
+	}
+.box {
+  background-color: #444;
+  color: #fff;
+  font-size: 150%;
+}
+
+.header {
+  background-color: #222;
+
+}
